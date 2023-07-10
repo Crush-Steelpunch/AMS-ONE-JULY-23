@@ -2,3 +2,5 @@
 This is a teaching repo for AMS
 
 I've added a line
+
+EDIT

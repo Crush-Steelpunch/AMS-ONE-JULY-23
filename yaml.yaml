@@ -1,0 +1,62 @@
+# Lists maps and atom
+---
+# List of animals in cartoons
+- cat
+- dog
+- mouse
+- snake
+- monkey
+- bear
+...    # this is the end of a yamle file
+---    # this is the start of a new yaml file
+# Maps key value data
+name: leon
+weight: 75kg
+height: 5'9"
+eyes: 2
+legs: also 2
+is-alive: true
+
+# Hierachy of list and maps
+names:
+  - leon
+  - Alfie
+  - Thomas
+  - James
+  - James
+  - Farhana
+pets:
+  - moose
+  - cow
+  - oxen
+  - elephant
+  - amoeba
+
+
+# List of maps
+- name: "leon"
+  height: 5'9"
+  weight: 75kg
+- name: "Fred"
+  height: 4'11"
+  weight: 90kg
+- name: "Janet"
+  height: 6'11"
+  weight: 83kg
+
+
+# multiline map
+
+- poem: |
+  Whose girl is that? I think I know.
+  Its owner is quite happy though.
+  Full of joy like a vivid rainbow,
+  I watch him laugh. I cry hello.
+- poem: |
+  He gives his girl a shake,
+  And laughs until her belly aches.
+  The only other sound's the break,
+  Of distant waves and birds awake.
+  
+
+

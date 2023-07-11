@@ -6,5 +6,3 @@ I've added this line
 Another EDIT
 i like tech
 I also like music
-
-This line will go away in the future

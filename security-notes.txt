@@ -1,0 +1,54 @@
+
+
+	Data
+	- Corruption
+	- Exfiltration
+	
+	What is an Asset
+	- Personal Data
+	- passwords / Authentication data
+	- Business Intellegence
+	- Industrial Secrets
+	- financial details
+	
+
+	Confidentiality
+	Integrity		CIA
+	Availability		
+
+
+	Risks
+
+
+   - Software / Technical threats
+        - hacking	
+    	  - Data Leak
+          - SQL injection
+	- Viruses
+	- hardware faliure
+	  - corruption
+	- trojan (Remote Access Trojan)
+	- ransomware also cryptomalware
+	- Denial of Service (Distributed)
+          - amplification attack
+        - man in the middle 
+
+
+   - Social Engineering
+	- phishinga / spear phishing
+        - impersonation
+        - wateringhole attacks
+	- 
+        
+
+
+
+host
+
+	27.89.6.2
+	Request  To: 56.47.89.128    From: 198.55.43.7
+	
+	Respones server5 serv78 server900  multiple ks 	
+		to: 198.55.43.7      From 56.47.89.128
+
+

@@ -51,3 +51,19 @@
 | CUSTOMERID | INT | FK_CUSTOMER_CUSTOMERID |
 | QUANTITY | INT | DEFAULT=1 |
 | SALE | DATETIME |  NOT NULL |
+
+
+
+
+
+
+product_id 	product_name 	              developer_id 	developer           price
+1 	        Sitar Hero 	                  103 	        StockRAR 	        5.99
+2 	        Paint Drying Simulator 	      101 	        Gr9 Games 	        3.95
+3 	        Extreme ChessBoxing 2021      102 	        MashButton Ltd 	    1.19
+4           Grow My Flowers EXTREME 2023  101           Gr9 Games           4.02
+5           Windwaching                   101           Gr9 Games Ltd       2.27
+
+### ERD
+
+![GameDB ERD Diagram](gamedb-erd.png)

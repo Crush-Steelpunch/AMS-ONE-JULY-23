@@ -64,6 +64,3 @@ column_definition = data_type  constraints
 `CREATE TABLE people ( ID  INT PRIMARY KEY AUTO_INCREMENT , first_name VARCHAR(50) NOT NULL, last_name VARCHAR(50), age INT, Date_of_birth  DATE, living BOOL DEFAULT True );`
 
 
-### ERD
-
-![GameDB ERD Diagram](gamedb-erd.png)

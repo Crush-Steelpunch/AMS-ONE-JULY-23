@@ -80,3 +80,33 @@ CREATE TABLE family (
     );
 -- FOREIGN KEY: This is a fake column to say our tables PEOPLE_ID is linked to another column in another table
 ```
+
+## INSERTING
+
+`INSERT INTO tbl_name (col_name [, col_name] ...) VALUES ( value [, value] ... )`
+
+`INSERT INTO family (Family_Name) VALUES ('Robinson')`
+
+```SQL
+INSERT people (first_name,last_name,age,Date_of_birth) VALUES ('Leon',1,21,'2002-10-21');
+INSERT people (first_name,last_name,age,Date_of_birth) VALUES ('Brian',4,50,'1973-10-21');
+INSERT people (first_name,last_name,age,Date_of_birth,living) VALUES ('Mr Peas',1,200,'1823-07-17',0);
+```
+
+
+## UPDATING
+
+`UPDATE table_reference SET column1=value1, column2=value2  WHERE where_condition
+
+Start with a SELECT
+`SELECT age,Date_of_birth FROM people WHERE first_name="Leon";`
+
+Modity to an UPDATE statement
+
+`UPDATE people SET age=48,Date_of_birth='1976-10-21'  WHERE first_name="Leon";`
+
+## DELETE
+
+`DELETE FROM tbl_name WHERE where_condition`
+
+`DELETE FROM people WHERE first_name="Mr Peas";`

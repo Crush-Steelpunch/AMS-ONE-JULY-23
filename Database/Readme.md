@@ -66,18 +66,17 @@ CREATE TABLE people ( first_name VARCHAR(50), last_name VARCHAR(50), age INT, Da
 CREATE TABLE people ( 
   ID  INT PRIMARY KEY AUTO_INCREMENT, 
   first_name VARCHAR(50) NOT NULL, 
-  last_name VARCHAR(50), 
+  last_name INT, 
   age INT, 
   Date_of_birth  DATE, 
-  living BOOL DEFAULT True );
+  living BOOL DEFAULT True,
+  FOREIGN KEY (last_name) REFERENCES family(ID));
 ```
 
 ```SQL
 CREATE TABLE family (
     ID INT PRIMARY KEY AUTO_INCREMENT, 
-    Family_Name VARCHAR(50) NOT NULL, 
-    PEOPLE_ID INT NOT NULL, 
-    FOREIGN KEY (PEOPLE_ID) REFERENCES people(ID) 
+    Family_Name VARCHAR(50) NOT NULL 
     );
 -- FOREIGN KEY: This is a fake column to say our tables PEOPLE_ID is linked to another column in another table
 ```

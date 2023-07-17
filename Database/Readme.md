@@ -56,11 +56,28 @@ column_definition = data_type  constraints
 
 ### Simple table
 
-`CREATE TABLE people ( first_name VARCHAR(50), last_name VARCHAR(50), age INT, Date_of_birth  DATE )`
+```SQL
+CREATE TABLE people ( first_name VARCHAR(50), last_name VARCHAR(50), age INT, Date_of_birth  DATE )
+```
 
 ### Table with Constraints
 
+```SQL
+CREATE TABLE people ( 
+  ID  INT PRIMARY KEY AUTO_INCREMENT, 
+  first_name VARCHAR(50) NOT NULL, 
+  last_name VARCHAR(50), 
+  age INT, 
+  Date_of_birth  DATE, 
+  living BOOL DEFAULT True );
+```
 
-`CREATE TABLE people ( ID  INT PRIMARY KEY AUTO_INCREMENT , first_name VARCHAR(50) NOT NULL, last_name VARCHAR(50), age INT, Date_of_birth  DATE, living BOOL DEFAULT True );`
-
-
+```SQL
+CREATE TABLE family (
+    ID INT PRIMARY KEY AUTO_INCREMENT, 
+    Family_Name VARCHAR(50) NOT NULL, 
+    PEOPLE_ID INT NOT NULL, 
+    FOREIGN KEY (PEOPLE_ID) REFERENCES people(ID) 
+    );
+-- FOREIGN KEY: This is a fake column to say our tables PEOPLE_ID is linked to another column in another table
+```

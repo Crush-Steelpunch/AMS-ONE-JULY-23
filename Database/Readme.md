@@ -110,3 +110,33 @@ Modity to an UPDATE statement
 `DELETE FROM tbl_name WHERE where_condition`
 
 `DELETE FROM people WHERE first_name="Mr Peas";`
+
+
+SELECT Name FROM country WHERE Contienent='Asia';
+
+
+## Nested Queries 
+
+show the country in Asia with the MAX gnp
+
+`SELECT Name, GNP FROM country WHERE GNP=(SELECT MAX(GNP) AS MAX_GNP FROM country WHERE Continent='Asia');`
+
+SELECT ROW_NUMBER() OVER() AS ROWNUM, SUM(SurfaceArea) AS AREA, Continent FROM country GROUP BY Continent
+
+Nested table in FROM 
+```SQL
+SELECT * FROM (
+  SELECT ROW_NUMBER() OVER() AS ROWNUM, SUM(SurfaceArea) AS AREA, Continent FROM country GROUP BY Continent
+  ) 
+  AS Tab WHERE ROWNUM%2=0;
+```
+
+## Joins
+
+SELECT * FROM Table1  JOIN table2 ON table1.PK = table2.FK;
+
+
+
+
+
+`SELECT city.Name,country.Name FROM city LEFT JOIN country ON city.CountryCode = country.code;`

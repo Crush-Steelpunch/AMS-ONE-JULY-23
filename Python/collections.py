@@ -22,9 +22,13 @@ tuple_cool_pigs = ("Chris P. Bacon", "Hamlet", "Hogwarts")
 
 # Lists & String conversion
 
+## List to string
+
 joinvar=" and "                                                                 
 listvar = ['Meat', 'Vegetables', 'Cake', 'Beer for the weekend']
 joinvar.join(listvar)
+
+## String to list
 
 listvar2 = "Meat,Vegetables,Cake,Beer for the weekend"
 listvar2.split(',')

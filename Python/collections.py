@@ -39,3 +39,4 @@ dictionary_variable = {'name': 'Leon', 'cool': True, 'Watch': 'Charged', 'Awesom
 print(dictionary_variable['cool'])
 dictionary_variable["screens"] = 4 
 dictionary_variable["Awesomeness"] = 200000000
+dictionary_variable.pop('Watch')

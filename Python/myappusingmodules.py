@@ -1,7 +1,12 @@
 import mymodules
+import pdb
 from text_generator import generate
+pdb.set_trace()
 
 print(mymodules.mrshouty("whisper"))
+
+mycandles = mymodules.fourcandles(42)
+
 
 print(mymodules.add5toanynumber(42.6))
 

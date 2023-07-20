@@ -15,3 +15,8 @@ def aceififyer(makemoreace):
 
 def len():
     return "Hi, I am Len"
+
+
+def nameofthefunction(parameter1):
+    parameter1 = parameter1 + "sometext"
+    return "This is Data out of a function with: " + parameter1

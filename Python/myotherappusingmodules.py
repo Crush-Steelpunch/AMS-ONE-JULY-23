@@ -8,6 +8,4 @@ print(hiamlen())
 
 print(len(['cat']))
 
-breakpoint()
-
 randout = randint(5,105)

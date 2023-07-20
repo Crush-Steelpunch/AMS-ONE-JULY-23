@@ -7,6 +7,7 @@ print(mymodules.mrshouty("whisper"))
 
 mycandles = mymodules.fourcandles(42)
 
+print(mycandles)
 
 print(mymodules.add5toanynumber(42.6))
 

@@ -5,7 +5,7 @@ class Dog:
 #    personality = ""
 #    barkstr = ""
 
-    def __init__(inputcolour,inputbreed,inputpersonality,inputbarkstr):
+    def __init__(self,inputcolour,inputbreed,inputpersonality,inputbarkstr):
         self.colour = inputcolour
         self.breed = inputbreed
         self.personality = inputpersonality

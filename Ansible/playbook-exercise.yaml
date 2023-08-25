@@ -25,6 +25,7 @@
       update_cache: true
       cache_valid_time: 300
     register: installnginx
+    failed_when: installnginx.cache_update_time > 1
 
   - debug:
       var: installnginx
@@ -38,6 +39,7 @@
   - name: Print the contents of the nginx_config
     debug:
       var: nginx_config
+      verbosity: 1
 
   - name: Restart nginx if needed
     service:

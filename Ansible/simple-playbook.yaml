@@ -1,0 +1,23 @@
+  # 'Play' level settings
+    # 'Task' level settings
+      # 'Module' level settings
+
+
+- hosts: localhost  # can also be 'all' or '<groupname>'
+  # become: True    # All tasks run as root
+  tasks:
+  - name: this is task1         # I like to name my tasks
+    become: True                # This task will run as root
+    ansible.builtin.apt:        # module name 
+      # module arguments
+      name: nginx
+      state: present
+  - name: this is task2
+    ansible.builtin.file:
+      path: /home/ubuntu/leonfolderfromaplaybook
+      state: directory
+  - name: this is task3
+    become: True                # This task will run as root
+    ansible.builtin.systemd_service:
+      name: nginx
+      state: restarted

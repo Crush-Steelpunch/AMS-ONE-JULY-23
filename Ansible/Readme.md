@@ -13,6 +13,7 @@ Usefull starter modules
 - ansible.builtin.systemd
 - ansible.builtin.systemd_service
 - ansible.builtin.file
+- ansible.builtin.copy
 - ansible.builtin.debug
 
 

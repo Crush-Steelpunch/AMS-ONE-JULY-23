@@ -5,8 +5,9 @@
     ignore_errors: True
   - name: create leonconfig
     become: True
-    file: 
-      path: /etc/leonconfig
+    copy: 
+      content: 'Leon spent too long on this'
+      dest: /etc/leonconfig
       mode: '644'
     register: leontaskvar
   - name: Print a message

@@ -6,7 +6,7 @@
   - name: create leonconfig
     become: True
     copy: 
-      content: 'Leon spent too long on this'
+      content: 'Leon spent far too long on this'
       dest: /etc/leonconfig
       mode: '644'
     register: leontaskvar

@@ -17,7 +17,9 @@
   - name: Print the whole var
     debug:
       var: leontaskvar  # access like a dict
+      verbosity: 1
   - name: Print a specific item from the car
     debug:
       var: leontaskvar.failed  # access like a dict
+      verbosity: 1
 

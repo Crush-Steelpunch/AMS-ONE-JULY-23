@@ -7,7 +7,7 @@
     become: True
     file: 
       path: /etc/leonconfig
-      mode: 644
+      mode: '644'
     register: leontaskvar
   - name: Print a message
     debug:

@@ -13,6 +13,8 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
+  - name: edit the file
+    command: "sed -i 's/nginx/LEONWOXERE/' /etc/nginx/nginx.conf"
   - name: Restart nginx if needed
     service:
       name: nginx

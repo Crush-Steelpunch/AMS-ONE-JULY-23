@@ -1,0 +1,17 @@
+# example with group names
+
+devservers:
+  hosts:
+    dev1.internal.net
+    dev2.internal.net
+    dev3.internal.net
+testservers:
+  hosts:
+    test1.internal.net
+    test2.internal.net
+    test3.internal.net
+production:
+  hosts:
+    prod1.internal.net
+    prod2.internal.net
+    prod3.internal.net

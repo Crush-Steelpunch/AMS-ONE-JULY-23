@@ -1,0 +1,37 @@
+#
+#Use the debug module to show the information from the 
+#   "Copy nginx file over" task
+#Get the playbook to fail on the "Copy nginx file over" 
+# task if the path before and after are the same
+#Get the playbook to only run "Copy nginx file over" 
+#   task if the path before and after are the same (this won't work, why?)
+#Make the "install nginx" task fail if the update cache time is
+#    bigger than 1.
+#Write a playbook that uninstalls nginx, you can test this by
+#     running curl localhost and you should get a connection error.
+#Once nginx is uninstalled, run the install playbook again and
+#    run curl localhost. Did this work? If not, how can we make 
+#    our install playbook better?
+
+
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+  - name: install nginx
+    apt:
+      name: nginx
+      state: present
+      update_cache: true
+
+  - name: Copy nginx file over
+    copy:
+      src: nginx.conf
+      dest: /etc/nginx/nginx.conf
+    register: nginx_config
+
+  - name: Restart nginx if needed
+    service:
+      name: nginx
+      state: restarted
+    when: nginx_config.changed == true

@@ -10,9 +10,14 @@
       dest: /etc/leonconfig
       mode: '644'
     register: leontaskvar
+    failed_when: leontaskvar.checksum != "e7c3116030da507ab80564f5e6c54ace62b3571e"
   - name: Print a message
     debug:
       msg: "Below is a variable"
-  - name:
+  - name: Print the whole var
     debug:
-      var: leontaskvar.failed
+      var: leontaskvar  # access like a dict
+  - name: Print a specific item from the car
+    debug:
+      var: leontaskvar.failed  # access like a dict
+

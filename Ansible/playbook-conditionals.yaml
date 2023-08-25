@@ -2,3 +2,4 @@
   tasks:
   - name: Set up a task that will fail
     ansible.builtin.command: 'mkdir /home/ubuntu/failfolder'
+    ignore_errors: True

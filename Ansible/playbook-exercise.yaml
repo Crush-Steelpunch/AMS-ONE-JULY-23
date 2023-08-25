@@ -7,11 +7,7 @@
 #   task if the path before and after are the same (this won't work, why?)
 #Make the "install nginx" task fail if the update cache time is
 #    bigger than 1.
-#Write a playbook that uninstalls nginx, you can test this by
-#     running curl localhost and you should get a connection error.
-#Once nginx is uninstalled, run the install playbook again and
-#    run curl localhost. Did this work? If not, how can we make 
-#    our install playbook better?
+
 
 
 - hosts: localhost
@@ -25,7 +21,7 @@
       update_cache: true
       cache_valid_time: 300
     register: installnginx
-    failed_when: installnginx.cache_update_time > 1
+#    failed_when: installnginx.cache_update_time > 1  # It's always going to be > 0
 
   - debug:
       var: installnginx
@@ -36,7 +32,7 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-    failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path  # failed_when succeded
+#    failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path  # failed_when succeded
   - name: Print the contents of the nginx_config
     debug:
       var: nginx_config
@@ -47,3 +43,12 @@
       name: nginx
       state: restarted
     when: nginx_config.changed == true
+  - name: Check that you can connect (GET) to a page and it returns a status 200    
+    ansible.builtin.uri:
+      url: http://localhost
+      return_content: True
+    register: webcontent
+  - debug:
+      var: webcontent.content
+
+  

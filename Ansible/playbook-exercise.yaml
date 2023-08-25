@@ -29,6 +29,7 @@
 
   - debug:
       var: installnginx
+      verbosity: 1
 
   - name: Copy nginx file over
     copy:

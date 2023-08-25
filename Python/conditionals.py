@@ -87,3 +87,11 @@ if mark > 85:
         print("pass")
 else:
     print("fail") 
+
+
+
+
+temp = "21C"
+templist = temp.split('C')
+numtemp = int(templist[0])
+

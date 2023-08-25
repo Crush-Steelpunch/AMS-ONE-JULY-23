@@ -13,6 +13,7 @@ Usefull starter modules
 - ansible.builtin.systemd
 - ansible.builtin.systemd_service
 - ansible.builtin.file
+- ansible.builtin.debug
 
 
 `ansible localhost -m apt -a "name=nginx state=present" -b`
@@ -24,3 +25,6 @@ Usefull starter modules
 `ansible localhost -m ansible.builtin.command -a "mkdir /home/ubuntu/ansicmddir"`  Not Idempotent
 ansible.builtin.
 `ansible localhost -m ansible.builtin.systemd_service -a "name=nginx state=restarted" -b`
+
+
+## Playbooks

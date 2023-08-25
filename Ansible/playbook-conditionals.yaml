@@ -3,3 +3,16 @@
   - name: Set up a task that will fail
     ansible.builtin.command: 'mkdir /home/ubuntu/failfolder'
     ignore_errors: True
+  - name: create leonconfig
+    become: True
+    file: 
+      path: /etc/leonconfig
+      state: present
+      mode: 644
+    register: leontaskvar
+  - name: Print a message
+    debug:
+      msg: "Below is a variable"
+  - name:
+    debug:
+      var: leontaskvar

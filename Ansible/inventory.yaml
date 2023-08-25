@@ -1,4 +1,7 @@
 ubuntu:
   hosts:
     172.31.39.153:
-      ansible_ssh_private_key_file: '~/InstructorLeonKey.pem'
+    172.31.37.152:
+    172.31.42.234:
+  vars:
+    ansible_ssh_private_key_file: '~/InstructorLeonKey.pem'

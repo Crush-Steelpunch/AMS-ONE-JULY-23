@@ -2,7 +2,7 @@ events {}
 http{
     server {
        location / {
-            return 200 "Hello new {{ nxingxvar }}\n";
+            return 200 "Hello new {{ nxingxvar }}: My ip is {{ ansible_default_ipv4 }}\n";
        }
   }
 }

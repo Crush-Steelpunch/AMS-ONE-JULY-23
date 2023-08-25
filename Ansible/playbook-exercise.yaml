@@ -23,13 +23,18 @@
       name: nginx
       state: present
       update_cache: true
+      cache_valid_time: 300
+    register: installnginx
+
+  - debug:
+      var: installnginx
 
   - name: Copy nginx file over
     copy:
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-    failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path
+    failed_when: nginx_config.diff.after.path == nginx_config.diff.before.path  # failed_when succeded
   - name: Print the contents of the nginx_config
     debug:
       var: nginx_config

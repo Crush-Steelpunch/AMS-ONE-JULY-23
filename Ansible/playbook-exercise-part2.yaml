@@ -1,0 +1,15 @@
+#Write a playbook that uninstalls nginx, you can test this by
+#     running curl localhost and you should get a connection error.
+#Once nginx is uninstalled, run the install playbook again and
+#    run curl localhost. Did this work? If not, how can we make 
+#    our install playbook better?
+
+
+- name: The Uninstall Playbook
+  hosts: localhost
+  become: true
+  tasks:
+  - name: uninstall nginx
+    apt:
+      name: nginx
+      state: absent

@@ -1,0 +1,20 @@
+- hosts: ubuntu
+  become: true
+  tasks:
+    - name: install nginx
+      apt:
+        name: nginx
+        state: present
+
+  - name: Copy nginx file over
+    copy:
+      src: nginx.conf
+      dest: /etc/nginx/nginx.conf
+
+  - name: Check that you can connect (GET) to a page and it returns a status 200    
+    ansible.builtin.uri:
+      url: http://localhost
+      return_content: True
+    register: webcontent
+  - debug:
+      var: webcontent.content

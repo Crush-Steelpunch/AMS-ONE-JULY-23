@@ -1,6 +1,7 @@
 ubuntu:
   hosts:
     172.31.39.153:
+      nxingxvar: INVENTORYVAR
     172.31.37.152:
     172.31.42.234:
   vars:

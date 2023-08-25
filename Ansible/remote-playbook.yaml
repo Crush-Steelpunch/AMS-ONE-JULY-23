@@ -11,12 +11,14 @@
 
 
   - name: Copy nginx file over
-    copy:
-      src: nginx.conf
+    template:
+      src: nginx.j2
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-  - name: edit the file
-    command: "sed -i 's/nginx/{{ nxingxvar }}/' /etc/nginx/nginx.conf"
+#  - name: edit the file
+#    command: "sed -i 's/nginx/{{ nxingxvar }}/' /etc/nginx/nginx.conf"
+#    vars:
+#    - nxingxvar: ASLDKJASLKA
   - name: Restart nginx if needed
     service:
       name: nginx

@@ -29,7 +29,7 @@
       src: nginx.conf
       dest: /etc/nginx/nginx.conf
     register: nginx_config
-
+    fail_when: nginx_config.diff.after.path == nginx_config.diff.before.path
   - name: Print the contents of the nginx_config
     debug:
       var: nginx_config

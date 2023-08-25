@@ -1,10 +1,10 @@
 - hosts: ubuntu
   become: true
   tasks:
-    - name: install nginx
-      apt:
-        name: nginx
-        state: present
+  - name: install nginx
+    apt:
+      name: nginx
+      state: present
 
   - name: Copy nginx file over
     copy:

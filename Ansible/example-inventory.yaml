@@ -3,6 +3,7 @@
 devservers:
   hosts:
     dev1.internal.net
+      ansible_user: fedora
     dev2.internal.net
     dev3.internal.net
 testservers:
@@ -10,8 +11,25 @@ testservers:
     test1.internal.net
     test2.internal.net
     test3.internal.net
+  vars:
+    ansible_user: ubuntu
 production:
   hosts:
     prod1.internal.net
+    prod2.internal.net
+    prod3.internal.net
+  vars:
+    ansible_user: ubuntu
+east-dc:
+  hosts:
+    dev1.internal.net
+    dev2.internal.net
+    test1.internal.net
+    prod1.internal.net
+west-dc:
+  hosts:
+    dev3.internal.net
+    test2.internal.net
+    test3.internal.net
     prod2.internal.net
     prod3.internal.net

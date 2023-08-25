@@ -27,5 +27,11 @@ Usefull starter modules
 ansible.builtin.
 `ansible localhost -m ansible.builtin.systemd_service -a "name=nginx state=restarted" -b`
 
+## Settiung up ansible ssh
 
-## Playbooks
+copy the key to the ansible manager
+
+`scp -i ~/Downloads/InstructorLeonKey.pem  ~/Downloads/InstructorLeonKey.pem   ubuntu@3.10.51.193:~/`
+
+Make the file more secure
+`chmod 600 InstructorLeonKey.pem`

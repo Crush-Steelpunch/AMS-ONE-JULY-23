@@ -9,7 +9,17 @@
   hosts: localhost
   become: true
   tasks:
+  - name: stop nginx
+    systemd:
+      name: nginx
+      state: stopped
+      
   - name: uninstall nginx
     apt:
       name: nginx
       state: absent
+  
+  - name: Check that you can connect (GET) to a page and it returns a status 200    
+    ansible.builtin.uri:
+      url: http://localhost
+    ignore_errors: true

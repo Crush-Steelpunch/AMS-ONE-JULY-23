@@ -1,4 +1,4 @@
 - hosts: localhost
   tasks:
   - name: Set up a task that will fail
-    ansible.builtin.command: 'mkdir /home/ubunut/failfolder'
+    ansible.builtin.command: 'mkdir /home/ubuntu/failfolder'

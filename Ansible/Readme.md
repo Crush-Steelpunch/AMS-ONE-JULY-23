@@ -1,5 +1,7 @@
 # Ansible playbooks and other things
 
+## Ad Hoc commands
+
 `ansible host-pattern -m <module> -a moduleargs>`
 
 `ansible-doc -l`  list all ansible modules installed

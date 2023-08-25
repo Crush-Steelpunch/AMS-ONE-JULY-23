@@ -15,4 +15,4 @@
       msg: "Below is a variable"
   - name:
     debug:
-      var: leontaskvar[failed]
+      var: leontaskvar.failed

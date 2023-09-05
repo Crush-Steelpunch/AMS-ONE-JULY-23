@@ -1,5 +1,5 @@
 Presentation format
-
+- Presentation slot is no longer than 30 minutes total.
 - Introduce the team and the project spec
 - What the team's solution was
 - Demonstration of the solution
